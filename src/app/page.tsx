@@ -1,103 +1,82 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section id="inicio" className="relative min-h-screen bg-[url('/setupdev.jpg')] bg-cover flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="relative text-center text-white">
+          <h1 className="text-4xl font-bold pb-2">Bem-vindo</h1>
+          <h1 className="text-8xl font-bold">Desenvolvedor web</h1>
+          <div className="pt-10">
+            <button className="border border-amber-800 text-red-50 px-8 py-4 rounded-4xl transition-colors hover:bg-amber-900 hover:text-white cursor-pointer">
+            Enviar via WhatsApp
+          </button>
+          </div>
+          
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+      </section>
+
+      <section id="about" className="min-h-screen p-10 bg-stone-900">
+
+        <div className="relative flex items-center justify-center h-64">
+          <h1 className="absolute text-9xl font-extrabold text-white/5 tracking-widest">SOBRE MIM</h1>
+          <div className="text-center">
+            <h2 className="text-5xl font-bold text-white">
+              Um pouco sobre mim</h2>
+          </div>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 text-gray-300">
+
+          <div>
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Eu sou <span className="text-3xl text-red-800">Cristiano Nascimento</span>, um desenvolvedor web
+            </h3>
+
+            <p className="leading-relaxed text-white/50">
+              Já estou na área há 8 anos profissionalmente, mas comecei a "codar" desde os meus 11 anos de idade. Desenvolvi vários projetos para empresas com nomes grandes no mercado, com diferentes regras de negócios.
+              Hoje eu sou desenvolvedor fullstack sênior na Plusoft InPaaS, uma empresa voltada para consultoria de software e com o seu produto Hike, um sistema de automatização de processos - BPM (Business Process Management).
+            </p>
+          </div>
+
+          <div className="w-72 space-y-4">
+            <div className="border-b border-gray-700/50 pb-4">
+              <h4>
+                <span className="font-semibold text-white">Nome: </span>
+                Cristiano Nascimento
+              </h4>
+            </div>
+
+            <div className="border-b border-gray-700/50 pb-4">
+              <h4>
+                <span className="font-semibold text-white">Email: </span>
+                <span className="text-red-800">cristiano@ajulabs.com</span>
+              </h4>
+            </div>
+
+            <div className="border-b border-gray-700/50 pb-4">
+              <h4><span className="font-semibold text-white">Idade: </span>37 anos</h4>
+            </div>
+
+            <div className="pt-6">
+              <button className="border border-amber-800 text-red-50 px-8 py-2 rounded-4xl transition-colors hover:bg-amber-900 hover:text-white cursor-pointer">
+                Enviar via WhatsApp</button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section id="projects" className="min-h-screen p-10 bg-slate-600">
+        <h1 className="text-3xl font-bold">O que eu faço</h1>
+      </section>
+
+      <section id="contact" className="min-h-screen p-10 bg-slate-700">
+        <h1 className="text-3xl font-bold">Contato</h1>
+      </section>
+    </main>
   );
 }
