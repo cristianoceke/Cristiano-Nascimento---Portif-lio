@@ -13,26 +13,27 @@ export default function Home() {
           <h1 className="text-4xl font-bold pb-2">Bem-vindo</h1>
           <h1 className="text-8xl font-bold">Desenvolvedor web</h1>
           <div className="pt-10">
-            <button className="border border-amber-900 text-red-50 px-8 py-4 rounded-4xl transition-colors hover:bg-amber-900 hover:text-white cursor-pointer">
+            <button className="border border-amber-600 text-red-50 px-8 py-4 rounded-4xl transition-colors hover:bg-amber-600 hover:text-white cursor-pointer">
               Enviar via WhatsApp
             </button>
           </div>
         </div>
       </section>
 
+
       <section id="about" className="min-h-screen p-10 bg-stone-900">
         <div className="relative flex items-center justify-center h-64">
           <h1 className="absolute text-9xl font-extrabold text-white/5 tracking-widest">SOBRE MIM</h1>
           <div className="text-center">
-            <h2 className="text-5xl font-bold text-white after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-900 after:mx-auto after:mt-2">
+            <h2 className="text-5xl font-bold text-white after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
               Um pouco sobre mim</h2>
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 text-gray-300">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
           <div>
             <h3 className="text-3xl font-bold text-white mb-4">
-              Eu sou <span className="text-3xl text-amber-900">Cristiano Nascimento</span>, um desenvolvedor web
+              Eu sou <span className="text-3xl text-amber-600">Cristiano Nascimento</span>, um desenvolvedor web
             </h3>
 
             <p className="leading-relaxed text-white/50">
@@ -52,7 +53,7 @@ export default function Home() {
             <div className="border-b border-gray-700/50 pb-4">
               <h4>
                 <span className="font-semibold text-white">Email: </span>
-                <span className="text-red-800">cristiano@ajulabs.com</span>
+                <span className="text-amber-600">cristiano@ajulabs.com</span>
               </h4>
             </div>
 
@@ -61,7 +62,7 @@ export default function Home() {
             </div>
 
             <div className="pt-6">
-              <button className="border border-amber-800 text-red-50 px-8 py-2 rounded-4xl transition-colors hover:bg-amber-900 hover:text-white cursor-pointer">
+              <button className="border border-amber-600 text-red-50 px-8 py-2 rounded-4xl transition-colors hover:bg-amber-600 hover:text-white cursor-pointer">
                 Enviar via WhatsApp</button>
             </div>
 
@@ -69,83 +70,175 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="min-h-screen p-10 bg-stone-900">
-        <h1 className="text-3xl font-bold">O que eu faço</h1>
-      </section>
 
-      <section id="contact" className="min-h-screen p-10 bg-neutral-800">
-        <div>
-          <div className="relative flex items-center justify-center h-64 ">
-            <h1 className="absolute text-9xl font-extrabold text-white/5 tracking-widest">CONTATO</h1>
+      <section id="projects" className="min-h-screen p-10 bg-zinc-800">
+        <div className="flex-1">
+
+          <div className="relative flex items-center justify-center h-64">
+            <h1 className="absolute text-9xl font-extrabold text-white/5 tracking-widest">
+              PORTIFÓLIO
+            </h1>
+
             <div className="text-center">
-              <h2 className="text-5xl font-bold text-white after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-900 after:mx-auto after:mt-2">Fale comigo</h2>
+              <h2 className="text-5xl font-bold text-white after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
+                RESUMO
+              </h2>
+            </div>
+          </div>
+
+          <div className="flex justify-between">
+
+            <div className="w-50 text-center rounded bg-zinc-700 p-2 font-extrabold text-white/50 tracking-widest">
+              <h1 className="text-2xl p-1 border-b-1 border-amber-50/20 mb-3">ANÁLISE</h1>
+              <div className="rounded-2xl mb-2 justify-center text-center text-amber-500 border border-white/10 cursor-pointer">
+                <h2>cristiano <span>ok</span></h2>
+              </div>
+            </div>
+
+            <div className="w-50 text-center rounded bg-neutral-600 p-2 font-extrabold text-white/50 tracking-widest">
+              <h1 className="text-2xl p-1 border-b-1 border-amber-50/20 mb-3">PROGRESS</h1>
+              <div className="rounded-2xl mb-2 justify-center text-center text-purple-500 border border-white/10 cursor-pointer">
+                <h2>cristiano <span>ok</span></h2>
+              </div>
+            </div>
+
+            <div className="w-50 text-center rounded bg-neutral-700 p-2 font-extrabold text-white/50 tracking-widest">
+              <h1 className="text-2xl p-1 border-b-1 border-amber-50/20 mb-3">QA</h1>
+              <div className="rounded-2xl mb-2 justify-center text-center text-green-700 border border-white/10 cursor-pointer">
+                <h2>cristiano <span>ok</span></h2>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="text-amber-50 font-extrabold p-2 ">
+            <h1 className="p-4 text-3xl">Conhcimentos</h1>
+            <div className=" text-amber-50/20 grid grid-cols-1 md:grid-cols-3 gap-4 p-8">
+              <h2 className="border-amber-600 text-yellow-300 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500 ">JavaScript</h2>
+              <h2 className="border-amber-600 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">HTML</h2>
+              <h2 className="border-amber-600 text-blue-400 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">CSS</h2>
+              <h2 className="border-amber-600 text-blue-900 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">VUE</h2>
+              <h2 className="border-amber-600 text-green-900 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">NEXTJS</h2>
+              <h2 className="border-amber-600 text-purple-500 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">REACT</h2>
+              <h2 className="border-amber-600 text-red-800 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">NESTJS</h2>
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 text-gray-300">
-          <div>
-            <ul className="space-y-4 text-lg text-white">
-              <li className="flex items-center gap-3">
-                <FontAwesomeIcon icon={faPhone} className="text-amber-900 w-[18px] h-[18px]" />
-                <span>(79) 9 9992-5126</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span>( Whatsapp )</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <FontAwesomeIcon icon={faEnvelope} className="text-amber-900 w-[18px] h-[18px]" />
-                <span>cristiano@ajulabs.com</span>
-              </li>
-            </ul>
 
-            <div>
-              <h4 className="leading-relaxed mt-4 text-2xl font-extrabold text-white">SIGA ME</h4>
+      <section id="contact" className="min-h-screen flex flex-col bg-neutral-800">
+        <div className="flex-1 p-10">
+
+          <div className="relative flex items-center justify-center h-64">
+
+            <h1 className="absolute text-9xl font-extrabold text-white/5 tracking-widest">
+              CONTATO
+            </h1>
+
+            <div className="text-center">
+              <h2 className="text-5xl font-bold text-white after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
+                Fale comigo
+              </h2>
             </div>
-            <div>
-              <ul className="flex gap-6 mt-4 pb-8">
-                <li>
-                  <a href="https://linkedin.com" className="text-gray-400 hover:text-blue-400 transition-colors">
-                    <FontAwesomeIcon icon={faLinkedin} className="w-[24px] h-[24px]" />
-                  </a>
+
+          </div>
+
+          <div className="flex pr-8 justify-evenly gap-7">
+            <div className="p-6">
+
+              <ul className="space-y-3 text-lg text-white">
+                <li className="flex items-center gap-3">
+                  <FontAwesomeIcon icon={faPhone} size="1x" className="text-amber-600" />
+                  <span>( 79 ) 99992-5126</span>
                 </li>
-                <li>
-                  <a href="https://github.com" className="text-gray-400 hover:text-white transition-colors">
-                    <FontAwesomeIcon icon={faGithub} className="w-[24px] h-[24px]" />
-                  </a>
+                <li className="flex items-center gap-3">
+                  <span>(Whatsapp)</span>
                 </li>
-                <li>
-                  <a href="https://instagram.com" className="text-gray-400 hover:text-pink-500 transition-colors">
-                    <FontAwesomeIcon icon={faInstagram} className="w-6 h-6" />
-                  </a>
+                <li className="flex items-center gap-3">
+                  <FontAwesomeIcon icon={faEnvelope} size="1x" className="text-amber-600" />
+                  <span>cristiano@ajulabs.com</span>
                 </li>
               </ul>
-            </div>
-          </div>
 
-          <div className="w-100 space-y-4">
-            <div>
-              <h4 className="text-2xl text-white font-extrabold text-md-center">
-                ENTRE EM CONTATO COMIGO
+              <h4 className="leading-relaxed mt-6 text-xl font-bold text-white">SIGA ME</h4>
+
+              <ul className="flex gap-6 mt-4">
+                <li className="relative group">
+                  <a
+                    href="https://linkedin.com"
+                    className="text-gray-400 hover:text-sky-500 transition-colors"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                  </a>
+                  <span className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 
+                     px-2 py-1 text-xs text-white bg-black rounded 
+                     opacity-0 group-hover:opacity-100 transition-opacity
+                     before:content-[''] before:absolute before:top-full before:left-1/2 
+                     before:-translate-x-1/2 before:border-4 
+                     before:border-transparent before:border-t-black">
+                    LinkedIn
+                  </span>
+                </li>
+
+                <li className="relative group">
+                  <a
+                    href="https://instagram.com"
+                    className="text-gray-400 hover:text-pink-600 transition-colors"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                  </a>
+                  <span className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 
+                     px-2 py-1 text-xs text-white bg-black rounded 
+                     opacity-0 group-hover:opacity-100 transition-opacity
+                     before:content-[''] before:absolute before:top-full before:left-1/2 
+                     before:-translate-x-1/2 before:border-4 
+                     before:border-transparent before:border-t-black">
+                    Instagram
+                  </span>
+                </li>
+
+                <li className="relative group">
+                  <a
+                    href="https://github.com"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                  </a>
+                  <span className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 
+                     px-2 py-1 text-xs text-white bg-black rounded 
+                     opacity-0 group-hover:opacity-100 transition-opacity
+                     before:content-[''] before:absolute before:top-full before:left-1/2 
+                     before:-translate-x-1/2 before:border-4 
+                     before:border-transparent before:border-t-black">
+                    GitHub
+                  </span>
+                </li>
+              </ul>
+
+            </div>
+
+            <div className="flex flex-col text-center space-y-6">
+              <h4 className="text-2xl text-white font-extrabold text-center">
+                ENTRE CONTATO COMIGO
               </h4>
-            </div>
-
-            <div className="pt-6">
-              <button className=" bg-amber-900 text-red-50 px-8 py-2 rounded-4xl transition-colors hover:border-amber-800 hover:border hover:bg-transparent hover:text-white cursor-pointer">
-                Enviar via WhatsApp</button>
+              <button className="bg-amber-600 text-red-50 px-8 py-3 rounded-4xl transition-colors hover:border-amber-600 hover:border hover:bg-transparent hover:text-white cursor-pointer">
+                Enviar via WhatsApp
+              </button>
             </div>
 
           </div>
         </div>
-        <footer className=" bg-gray-700/50 p-6 text-center text-gray-400">
+
+        <footer className="bg-stone-900 py-6 text-center text-gray-400 text-sm h-64">
           <p>
-            Copyright © 2025 <span className="text-amber-900 font-semibold">Cristiano Nascimento</span>.
-            Todos os direitos reservados.
+            Copyright © 2025{" "}
+            <span className="text-amber-600 font-semibold">Cristiano Nascimento</span>. Todos os direitos reservados.
           </p>
         </footer>
+
       </section>
+
     </main>
-
-
   );
 }
