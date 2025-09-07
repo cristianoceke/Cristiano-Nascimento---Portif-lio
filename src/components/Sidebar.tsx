@@ -24,9 +24,7 @@ export default function Sidebar() {
 
   return (
     <aside className="fixed left-0 top-0 h-screen w-64 bg-stone-950 pt-12 px-6 text-white">
-      {/* coluna que ocupa toda a altura; o footer é empurrado com mt-auto */}
       <div className="flex h-full flex-col">
-        {/* Header/Topo */}
         <div className="flex flex-col items-center gap-6">
           <div className="relative h-24 w-24 overflow-hidden rounded-full ring-1 ring-white/10">
             <Image src="/profile.png" alt="Foto de perfil" fill className="object-cover" />
@@ -37,7 +35,6 @@ export default function Sidebar() {
             <p className="text-xs text-gray-500">Desenvolvedor Web</p>
           </div>
 
-          {/* Navegação */}
           <nav className="mt-6 w-full">
             <ul className="space-y-1">
               {abas.map((aba) => {
@@ -61,7 +58,6 @@ export default function Sidebar() {
           </nav>
         </div>
 
-        {/* Footer fixo na parte de baixo da sidebar */}
         <footer className="mt-auto w-full">
           <div className="border-t border-white/10 p-4">
             <ul className="flex items-center justify-center gap-6 text-gray-400">

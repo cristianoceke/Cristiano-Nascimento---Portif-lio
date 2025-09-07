@@ -1,7 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import Kanban from "@/components/kanban";
 
+const task = [
+  {}
+]
 
 export default function Home() {
   return (
@@ -86,34 +90,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-between">
-
-            <div className="w-50 text-center rounded bg-zinc-700 p-2 font-extrabold text-white/50 tracking-widest">
-              <h1 className="text-2xl p-1 border-b-1 border-amber-50/20 mb-3">ANÁLISE</h1>
-              <div className="rounded-2xl mb-2 justify-center text-center text-amber-500 border border-white/10 cursor-pointer">
-                <h2>cristiano <span>ok</span></h2>
-              </div>
-            </div>
-
-            <div className="w-50 text-center rounded bg-neutral-600 p-2 font-extrabold text-white/50 tracking-widest">
-              <h1 className="text-2xl p-1 border-b-1 border-amber-50/20 mb-3">PROGRESS</h1>
-              <div className="rounded-2xl mb-2 justify-center text-center text-purple-500 border border-white/10 cursor-pointer">
-                <h2>cristiano <span>ok</span></h2>
-              </div>
-            </div>
-
-            <div className="w-50 text-center rounded bg-neutral-700 p-2 font-extrabold text-white/50 tracking-widest">
-              <h1 className="text-2xl p-1 border-b-1 border-amber-50/20 mb-3">QA</h1>
-              <div className="rounded-2xl mb-2 justify-center text-center text-green-700 border border-white/10 cursor-pointer">
-                <h2>cristiano <span>ok</span></h2>
-              </div>
-            </div>
-
+          <div className=" justify-items-center">
+            <Kanban />
           </div>
 
           <div className="text-amber-50 font-extrabold p-2 ">
             <h1 className="p-4 text-3xl">Conhcimentos</h1>
-            <div className=" text-amber-50/20 grid grid-cols-1 md:grid-cols-3 gap-4 p-8">
+            <div className=" text-amber-50/20 grid grid-cols-1 md:grid-cols-4 gap-4 p-8">
               <h2 className="border-amber-600 text-yellow-300 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500 ">JavaScript</h2>
               <h2 className="border-amber-600 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">HTML</h2>
               <h2 className="border-amber-600 text-blue-400 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">CSS</h2>
