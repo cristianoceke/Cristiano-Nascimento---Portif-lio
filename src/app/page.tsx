@@ -34,15 +34,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
           <div>
-            <h3 className="text-3xl font-bold text-white mb-4">
+            <h3 className="text-3xl font-bold text-white mb-2">
               Eu sou <span className="text-3xl text-amber-600">Cristiano Nascimento</span>, um desenvolvedor web
             </h3>
 
             <p className="leading-relaxed text-white/50">
-              Já estou na área há 8 anos profissionalmente, mas comecei a "codar" desde os meus 11 anos de idade. Desenvolvi vários projetos para empresas com nomes grandes no mercado, com diferentes regras de negócios.
-              Hoje eu sou desenvolvedor fullstack sênior na Plusoft InPaaS, uma empresa voltada para consultoria de software e com o seu produto Hike, um sistema de automatização de processos - BPM (Business Process Management).
+              Estudante do 8º período de Ciência da Computação pela Faculdade Descomplica UniAmérica, com experiência prática em desenvolvimento de software através de estágio na AjuLabs, atuando com React, Next.js, NestJS, Kotlin e PostgreSQL.
+              Profissional com 17 anos de experiência no setor público, atuando nos departamentos de Recursos Humanos e Secretaria de Educação, com forte vivência em gestão de dados, sistemas administrativos e planilhas avançadas.
+              Participante de bootcamps da Digital Innovation One (DIO) e em formação Full Stack pela OneBitCode, com foco em aplicações web e mobile.
+              Motivado a consolidar carreira na área de desenvolvimento de software, aplicando habilidades técnicas e experiências anteriores em projetos de impacto e soluções inovadoras.
             </p>
           </div>
 
