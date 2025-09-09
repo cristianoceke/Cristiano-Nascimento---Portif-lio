@@ -15,10 +15,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative text-center text-white">
           <h1 className="text-4xl font-bold pb-2">Bem-vindo</h1>
-          <h1 className="text-8xl font-bold">Desenvolvedor web</h1>
+          <h1 className="text-8xl font-bold">Desenvolvedor Web</h1>
           <div className="pt-10">
             <button className="border border-amber-600 text-red-50 px-8 py-4 rounded-4xl transition-colors hover:bg-amber-600 hover:text-white cursor-pointer">
-              Enviar via WhatsApp
+              Vamos conversar ?
             </button>
           </div>
         </div>
@@ -37,7 +37,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
           <div>
             <h3 className="text-3xl font-bold text-white mb-2">
-              Eu sou <span className="text-3xl text-amber-600">Cristiano Nascimento</span>, um desenvolvedor web
+              Eu sou <span className="text-3xl text-amber-600">Cristiano Nascimento</span>, um desenvolvedor Web
             </h3>
 
             <p className="leading-relaxed text-white/50">
@@ -69,7 +69,7 @@ export default function Home() {
 
             <div className="pt-6">
               <button className="border border-amber-600 text-red-50 px-8 py-2 rounded-4xl transition-colors hover:bg-amber-600 hover:text-white cursor-pointer">
-                Enviar via WhatsApp</button>
+                Vamos conversar ?</button>
             </div>
 
           </div>
