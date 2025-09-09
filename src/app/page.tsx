@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope, faUser, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import Kanban from "@/components/kanban";
 
 const task = [
@@ -25,51 +25,70 @@ export default function Home() {
       </section>
 
 
-      <section id="about" className="min-h-screen p-10 bg-stone-900">
-        <div className="relative flex items-center justify-center h-64">
+      <section id="about" className="min-h-screen flex flex-col justify-items-center p-10 bg-stone-900">
+        <div className="relative flex flex-col items-center justify-center h-36">
           <h1 className="absolute text-9xl font-extrabold text-white/5 tracking-widest">SOBRE MIM</h1>
-          <div className="text-center">
+          <div className="text-center flex flex-col ">
             <h2 className="text-5xl font-bold text-white after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
               Um pouco sobre mim</h2>
           </div>
+        </div>
+        <div className="w-4xl text-center pb-10 m-auto text-white/50">
+          <p>Participante de bootcamps da Digital Innovation One (DIO) e em formação Full Stack pela OneBitCode, com <span className="font-extrabold text-white/70">foco em aplicações web e mobile.</span>
+            Motivado a consolidar <span className="font-extrabold text-white/60">carreira na área de desenvolvimento de software</span>, aplicando habilidades técnicas e experiências anteriores em projetos de impacto e soluções inovadoras.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
           <div>
             <h3 className="text-3xl font-bold text-white mb-2">
-              Eu sou <span className="text-3xl text-amber-600">Cristiano Nascimento</span>, um desenvolvedor Web
+              EU SOU CRISTIANO NASCIMENTO, UM <span className="text-3xl text-amber-600">DESENVOLVEDOR WEB</span>
             </h3>
 
             <p className="leading-relaxed text-white/50">
-              Estudante do 8º período de Ciência da Computação pela Faculdade Descomplica UniAmérica, com experiência prática em desenvolvimento de software através de estágio na AjuLabs, atuando com React, Next.js, NestJS, Kotlin e PostgreSQL.
-              Profissional com 17 anos de experiência no setor público, atuando nos departamentos de Recursos Humanos e Secretaria de Educação, com forte vivência em gestão de dados, sistemas administrativos e planilhas avançadas.
-              Participante de bootcamps da Digital Innovation One (DIO) e em formação Full Stack pela OneBitCode, com foco em aplicações web e mobile.
-              Motivado a consolidar carreira na área de desenvolvimento de software, aplicando habilidades técnicas e experiências anteriores em projetos de impacto e soluções inovadoras.
+              Estudante do 8º período de Ciência da Computação pela Faculdade Descomplica UniAmérica,<span className="text-amber-600 font-extrabold">com experiência prática em desenvolvimento de software</span> através de estágio na AjuLabs, atuando com React, Next.js, NestJS, Kotlin e PostgreSQL.
             </p>
+            <br />
+            <p className="leading-relaxed text-white/50">
+              <span className="text-amber-600 font-extrabold">Profissional com 17 anos de experiência no setor público</span>, atuando nos departamentos de Recursos Humanos e Secretaria de Educação, com forte vivência em gestão de dados, sistemas administrativos e planilhas avançadas.
+            </p>
+
+            <div className="pt-6">
+              <button className=" border-l-neutral-900 bg-amber-600  text-red-50 px-8 py-2 rounded-full transition-colors hover:bg-amber-600 hover:text-white cursor-pointer">
+                Vamos conversar ?</button>
+            </div>
           </div>
 
-          <div className="w-72 space-y-4">
-            <div className="border-b border-gray-700/50 pb-4">
-              <h4>
-                <span className="font-semibold text-white">Nome: </span>
+          <div className="w-56 space-y-4">
+
+            <div className="pb-4">
+              <ul className="flex text-lg gap-10 text-white rounded-3xl">
+                <li className="w-56 flex items-center bg-amber-600 shadow-xl/60 shadow-amber-600 rounded-xl p-5 hover:bg-amber-950">
+                  <FontAwesomeIcon icon={faUser} size="2x" className="text-amber-50 cursor-pointer" />
+                </li>
+                <li className="w-56 flex items-center bg-amber-600 shadow-xl/60 shadow-amber-600 rounded-xl p-5 hover:bg-amber-950">
+                  <FontAwesomeIcon icon={faEnvelope} size="2x" className="text-amber-50 cursor-pointer" />
+                </li>
+                <li className="w-56 flex items-center bg-amber-600 shadow-xl/60 shadow-amber-600 rounded-xl p-5 hover:bg-amber-950">
+                  <FontAwesomeIcon icon={faCalendar} size="2x" className="text-amber-50 cursor-pointer" />
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-linear-to-r from-amber-600 to-neutral-900 rounded-full p-2">
+              <h4 className="font-extrabold pl-4">
                 Cristiano Nascimento
               </h4>
             </div>
 
-            <div className="border-b border-gray-700/50 pb-4">
-              <h4>
-                <span className="font-semibold text-white">Email: </span>
-                <span className="text-amber-600">cristiano@ajulabs.com</span>
+            <div className="w-96 bg-linear-to-r from-amber-600 to-neutral-900 rounded-full p-2 ">
+              <h4 className="font-extrabold pl-4">
+                cristiano@ajulabs.com
               </h4>
             </div>
 
-            <div className="border-b border-gray-700/50 pb-4">
-              <h4><span className="font-semibold text-white">Idade: </span>37 anos</h4>
-            </div>
-
-            <div className="pt-6">
-              <button className="border border-amber-600 text-red-50 px-8 py-2 rounded-4xl transition-colors hover:bg-amber-600 hover:text-white cursor-pointer">
-                Vamos conversar ?</button>
+            <div className="w-72 bg-linear-to-r from-amber-600 to-neutral-900 rounded-full p-2">
+              <h4 className="font-extrabold pl-4">37 anos</h4>
             </div>
 
           </div>
