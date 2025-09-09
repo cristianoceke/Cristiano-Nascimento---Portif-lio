@@ -96,16 +96,16 @@ export default function Home() {
             <Kanban />
           </div>
 
-          <div className="text-amber-50 font-extrabold p-2 ">
-            <h1 className="p-4 text-3xl">Conhcimentos</h1>
-            <div className=" text-amber-50/20 grid grid-cols-1 md:grid-cols-4 gap-4 p-8">
-              <h2 className="border-amber-600 text-yellow-300 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500 ">JavaScript</h2>
-              <h2 className="border-amber-600 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">HTML</h2>
-              <h2 className="border-amber-600 text-blue-400 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">CSS</h2>
-              <h2 className="border-amber-600 text-blue-900 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">VUE</h2>
-              <h2 className="border-amber-600 text-green-900 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">NEXTJS</h2>
-              <h2 className="border-amber-600 text-purple-500 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">REACT</h2>
-              <h2 className="border-amber-600 text-red-800 border-b w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">NESTJS</h2>
+          <div className="text-amber-50 font-extrabold p-2 mx-auto ">
+            <h1 className="p-4 text-center text-3xl">Conhcimentos</h1>
+            <div className=" text-amber-50/20 grid grid-cols-1 md:grid-cols-4 gap-4 p-8 justify-items-center">
+              <h2 className="border-amber-600 text-yellow-300 border-b text-center w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500 ">JavaScript</h2>
+              <h2 className="border-amber-600 border-b text-center w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">HTML</h2>
+              <h2 className="border-amber-600 text-blue-400 border-b text-center w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">CSS</h2>
+              <h2 className="border-amber-600 text-blue-900 border-b text-center w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">VUE</h2>
+              <h2 className="border-amber-600 text-green-900 border-b text-center w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">NEXTJS</h2>
+              <h2 className="border-amber-600 text-purple-500 border-b text-center w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">REACT</h2>
+              <h2 className="border-amber-600 text-red-800 border-b text-center w-32 p-2 rounded-2xl hover:text-white hover:bg-amber-600 hover:rounded-2xl hover:cursor-pointer transition-colors duration-500">NESTJS</h2>
             </div>
           </div>
         </div>
