@@ -54,7 +54,7 @@ export default function Home() {
             </p>
 
             <div className="pt-6">
-              <button className="border-s-4 border-y-1 bg-amber-600  text-red-50 px-8 py-2 rounded-full transition-colors hover:bg-amber-600 hover:text-white cursor-pointer">
+              <button className="border-s-4 border-y-1 bg-amber-600  text-red-50 px-8 py-2 rounded-full transition-colors hover:bg-amber-900 hover:text-white hover:border-none cursor-pointer">
                 Vamos conversar ?</button>
             </div>
           </div>
