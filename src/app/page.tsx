@@ -39,7 +39,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-10 text-gray-300">
           <div>
             <h3 className="text-3xl font-bold text-white mb-2">
               EU SOU CRISTIANO NASCIMENTO, UM <span className="text-3xl text-amber-600">DESENVOLVEDOR WEB</span>
@@ -54,7 +54,7 @@ export default function Home() {
             </p>
 
             <div className="pt-6">
-              <button className=" border-l-neutral-900 bg-amber-600  text-red-50 px-8 py-2 rounded-full transition-colors hover:bg-amber-600 hover:text-white cursor-pointer">
+              <button className="border-s-4 border-y-1 bg-amber-600  text-red-50 px-8 py-2 rounded-full transition-colors hover:bg-amber-600 hover:text-white cursor-pointer">
                 Vamos conversar ?</button>
             </div>
           </div>
