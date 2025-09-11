@@ -62,7 +62,6 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-2 sm:px-4 md:px-10 text-gray-300 max-w-6xl mx-auto">
           {/* Coluna esquerda */}
           <div>
-            
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               EU SOU CRISTIANO NASCIMENTO, UM <span className="text-amber-600">DESENVOLVEDOR WEB</span>
             </h3>
@@ -217,7 +216,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/cristianoceke" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/cristianoceke/" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                   </a>
                 </li>

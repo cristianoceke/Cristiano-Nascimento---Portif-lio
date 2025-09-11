@@ -47,7 +47,6 @@ export default function Kanban() {
     useSensor(TouchSensor,   { activationConstraint: { delay: 120, tolerance: 5 } })
   );
 
-  // ✅ corrigido: tipado corretamente
   function handleDragEnd(event: DragEndEvent) {
     const { active, over } = event;
     if (!over) return;
