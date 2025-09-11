@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope, faUser, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import Kanban from "@/components/kanban";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
 
@@ -43,7 +43,7 @@ export default function Home() {
             SOBRE MIM
           </h1>
           <div className="text-center">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white after:content-[''] after:block after:w-20 after:h-0.5 after:bg-amber-600 after:mx-auto after:mt-1">
               Um pouco sobre mim
             </h2>
           </div>
@@ -132,7 +132,7 @@ export default function Home() {
             </h1>
 
             <div className="text-center">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white after:block after:w-20 after:h-0.5 after:bg-amber-600 after:mx-auto after:mt-0.5">
                 RESUMO
               </h2>
             </div>
@@ -179,7 +179,7 @@ export default function Home() {
               CONTATO
             </h1>
             <div className="text-center">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white after:block after:w-20 after:h-0.5 after:bg-amber-600 after:mx-auto after:mt-0.5">
                 Fale comigo
               </h2>
             </div>
