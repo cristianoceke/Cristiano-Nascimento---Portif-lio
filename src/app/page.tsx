@@ -1,9 +1,17 @@
+"use client"; 
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope, faUser, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import Kanban from "@/components/kanban";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  const [open, setOpen ] = useState(false);
+
+  const closeAndGo = () => setOpen(false);
+
   return (
     <main>
       {/* HERO */}
@@ -15,10 +23,15 @@ export default function Home() {
         <div className="relative text-center text-white">
           <h1 className="text-2xl sm:text-4xl font-bold pb-2">Bem-vindo</h1>
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold">Desenvolvedor Web</h1>
-          <div className="pt-6 md:pt-10">
-            <button className="border border-amber-600 text-red-50 px-6 py-3 md:px-8 md:py-4 min-w-[160px] rounded-3xl transition-colors hover:bg-amber-600 hover:text-white cursor-pointer">
+          <div className="p-6 md:pt-10">
+            <a
+              href="https://wa.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-amber-600 text-red-50 px-6 py-3 md:px-8 md:py-4 min-w-[160px] rounded-full transition-colors hover:bg-amber-600 hover:text-white cursor-pointer inline-block text-center"
+            >
               Vamos conversar ?
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -66,9 +79,15 @@ export default function Home() {
             </p>
 
             <div className="pt-6">
-              <button className="border-s-4 border-y bg-amber-600 text-red-50 px-6 py-2 md:px-8 md:py-2 min-w-[160px] rounded-full transition-colors hover:bg-amber-900 hover:text-white hover:border-none cursor-pointer">
+              <a
+                href="https://wa.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-auto block w-full max-w-sm rounded-full bg-amber-600 px-6 py-3 text-center text-lg font-semibold text-white hover:border-white hover:border-2 hover:brightness-110 active:translate-y-[2px] active:shadow-[0_4px_0_#9c2a0f] transition"
+                onClick={closeAndGo}
+              >
                 Vamos conversar ?
-              </button>
+              </a>
             </div>
           </div>
 
