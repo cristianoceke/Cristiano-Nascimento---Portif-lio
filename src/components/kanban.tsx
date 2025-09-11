@@ -9,6 +9,7 @@ import {
   TouchSensor,
   useSensor,
   useSensors,
+  DragEndEvent,
 } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
 
@@ -46,7 +47,8 @@ export default function Kanban() {
     useSensor(TouchSensor,   { activationConstraint: { delay: 120, tolerance: 5 } })
   );
 
-  function handleDragEnd(event: any) {
+  // ✅ corrigido: tipado corretamente
+  function handleDragEnd(event: DragEndEvent) {
     const { active, over } = event;
     if (!over) return;
 
@@ -58,7 +60,7 @@ export default function Kanban() {
     );
   }
 
-  if (!mounted) return null; // evita mismatch no SSR
+  if (!mounted) return null; 
 
   return (
     <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
