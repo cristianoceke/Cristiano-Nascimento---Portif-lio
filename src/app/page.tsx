@@ -39,11 +39,11 @@ export default function Home() {
       {/* SOBRE MIM */}
       <section id="about" className="min-h-screen flex flex-col px-4 sm:px-6 md:px-10 py-8 bg-stone-900">
         <div className="relative flex flex-col items-center justify-center h-28 sm:h-36 md:h-48">
-          <h1 className="absolute text-3xl sm:text-6xl md:text-9xl font-extrabold text-white/5 tracking-widest select-none pointer-events-none whitespace-nowrap">
+          <h1 className="absolute text-7xl sm:text-6xl md:text-9xl font-extrabold text-white/5 tracking-widest select-none pointer-events-none whitespace-nowrap">
             SOBRE MIM
           </h1>
           <div className="text-center">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white after:content-[''] after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
               Um pouco sobre mim
             </h2>
           </div>
@@ -127,12 +127,12 @@ export default function Home() {
       <section id="projects" className="min-h-screen px-4 sm:px-6 md:px-10 py-8 bg-zinc-800">
         <div className="flex-1">
           <div className="relative flex items-center justify-center h-32 sm:h-40 md:h-64">
-            <h1 className="absolute text-4xl sm:text-6xl md:text-9xl font-extrabold text-white/5 tracking-widest select-none pointer-events-none whitespace-nowrap">
+            <h1 className="absolute text-6xl sm:text-6xl md:text-9xl font-extrabold text-white/5 tracking-widest select-none pointer-events-none whitespace-nowrap">
               PORTIFÓLIO
             </h1>
 
             <div className="text-center">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
+              <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold text-white after:block after:w-24 after:h-1 after:bg-amber-600 after:mx-auto after:mt-2">
                 RESUMO
               </h2>
             </div>
@@ -175,7 +175,7 @@ export default function Home() {
       <section id="contact" className="min-h-screen flex flex-col bg-neutral-800">
         <div className="flex-1 px-4 sm:px-6 md:px-10 py-8">
           <div className="relative flex items-center justify-center h-32 sm:h-40 md:h-64">
-            <h1 className="absolute text-4xl sm:text-6xl md:text-9xl font-extrabold text-white/5 tracking-widest select-none pointer-events-none whitespace-nowrap">
+            <h1 className="absolute text-7xl sm:text-6xl md:text-9xl font-extrabold text-white/5 tracking-widest select-none pointer-events-none whitespace-nowrap">
               CONTATO
             </h1>
             <div className="text-center">
