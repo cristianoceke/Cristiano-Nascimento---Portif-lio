@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
 
-  const [open, setOpen ] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const closeAndGo = () => setOpen(false);
 
@@ -191,7 +191,7 @@ export default function Home() {
               <ul className="space-y-3 text-base sm:text-lg text-white">
                 <li className="flex items-center gap-3">
                   <FontAwesomeIcon icon={faPhone} className="text-amber-600" />
-                  <span>( 79 ) 99992-5126</span>
+                  <span>( 79 ) 9X9Y2-5X2Y</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span>(Whatsapp)</span>
@@ -206,17 +206,17 @@ export default function Home() {
 
               <ul className="flex gap-6 mt-4 justify-center md:justify-start">
                 <li>
-                  <a href="https://linkedin.com" className="text-gray-400 hover:text-sky-500 transition-colors" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/cristiano-jesus-049a55144/" className="text-gray-400 hover:text-sky-500 transition-colors" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://instagram.com" className="text-gray-400 hover:text-pink-600 transition-colors" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/cristiano_o8/" className="text-gray-400 hover:text-pink-600 transition-colors" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faInstagram} size="2x" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/cristianoceke" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                   </a>
                 </li>
