@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className="flex bg-stone-950">
         <Sidebar />
-        <main className="md:ml-64 flex-1 pt-14 md:pt-0">
+        <main className="flex-1 md:ml-64 ml-0">
           {children}
         </main>
       </body>

@@ -1,93 +1,127 @@
 "use client";
 
 import { useState } from "react";
+import {
+  DndContext,
+  useDraggable,
+  useDroppable,
+  PointerSensor,
+  TouchSensor,
+  useSensor,
+  useSensors,
+} from "@dnd-kit/core";
+import { CSS } from "@dnd-kit/utilities";
+
+type Status = "Backlog" | "In progress" | "QA / Testing";
 
 type Task = {
-    id: string;
-    title: string;
-    status: "Backlog" | "In progress" | "QA / Testing"
+  id: string;
+  title: string;
+  status: Status;
 };
 
-const COLUMNS = [
-    { key: "Backlog", title: "Backlog", headerClass: "bg-zinc-700", accent: "text-amber-500" },
-    { key: "In progress", title: "In progress", headerClass: "bg-neutral-600", accent: "text-purple-400" },
-    { key: "QA / Testing", title: "QA / Testing", headerClass: "bg-neutral-700", accent: "text-green-500" },
-] as const;
+const COLUMNS: { id: Status; title: string; headerClass: string; accent: string }[] = [
+  { id: "Backlog",     title: "BACKLOG",     headerClass: "bg-zinc-700",  accent: "text-amber-500" },
+  { id: "In progress", title: "IN PROGRESS", headerClass: "bg-neutral-600",accent: "text-purple-400" },
+  { id: "QA / Testing",title: "QA / TESTING",headerClass: "bg-neutral-700",accent: "text-green-500" },
+];
 
 const INITIAL_TASKS: Task[] = [
-    { id: "t1", title: "Criar seção 'Início'(hero)", status: "Backlog" },
-    { id: "t2", title: "Ajustar tipografia do 'Sobre mim'", status: "Backlog" },
-    { id: "t3", title: "Responsividade do sidebar", status: "In progress" },
-    { id: "t4", title: "Tooltips dos ícones sociais", status: "QA / Testing" },
-]
+  { id: "t1", title: "Criar seção 'Início' (hero)", status: "Backlog" },
+  { id: "t2", title: "Ajustar tipografia do 'Sobre mim'", status: "Backlog" },
+  { id: "t3", title: "Responsividade do sidebar", status: "In progress" },
+  { id: "t4", title: "Tooltips dos ícones sociais", status: "QA / Testing" },
+];
 
 export default function Kanban() {
-    const [tasks, setTasks] = useState<Task[]>(INITIAL_TASKS);
-    const [over, setOver] = useState<null | Task["status"]>(null);
+  const [tasks, setTasks] = useState<Task[]>(INITIAL_TASKS);
 
-    function handleDrop(targetStatus: Task["status"], e: React.DragEvent) {
-        const taskId = e.dataTransfer.getData("text/plain");
-        if (!taskId) return;
-        setTasks((prev) =>
-            prev.map((t) => (t.id === taskId ? { ...t, status: targetStatus } : t))
-        );
-    }
+  const sensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
+    useSensor(TouchSensor,   { pressDelay: 120 })
+  );
 
-    function addTask(title: string) {
-        const nova: Task = { id: crypto.randomUUID(), title, status: "Backlog" };
-        setTasks((prev) => [nova, ...prev]);
-    }
+  function handleDragEnd(event: any) {
+    const { active, over } = event;
+    if (!over) return; 
 
-    return (
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {COLUMNS.map((col) => {
-                const tasksHere = tasks.filter((t) => t.status === col.key);
-                return (
-                    <section
-                        key={col.key}
-                        onDragOver={(e) => {
-                            e.preventDefault();
-                            setOver(col.key);
-                        }}
-                        onDragLeave={() => setOver((curr) => (curr === col.key ? null : curr))}
-                        onDrop={(e) => {
-                            handleDrop(col.key, e);
-                            setOver(null);
-                        }}
-                        className={`rounded-lg border border-white/10 bg-zinc-800/50 backdrop-blur transition
-                            ${over === col.key ? "ring-2 ring-amber-600" : ""}`}
-                    >
-                        <header className={`${col.headerClass} rounded-t-lg px4 py-3`}>
-                            <h3 className="text-center text-sm font-extrabold tracking-widest text-white/70">
-                                {col.title}
-                            </h3>
-                        </header>
-                        <ul className="p-3 space-y-3">
-                            {tasksHere.map((task) => (
-                                <li
-                                    key={task.id}
-                                    draggable
-                                    onDragStart={(e) => {
-                                        e.dataTransfer.setData("text/plain", task.id);
-                                        e.dataTransfer.effectAllowed = "move";
-                                    }}
-                                    className="cursor-pointer rounded-xl border border-white/10 bg-zinc-900/60 p-3 text-left hover:border-white/20 transition-colors"
-                                >
-                                    <h4 className={`text-sm font-semibold ${col.accent}`}>
-                                        {task.title}
-                                    </h4>
-                                </li>
-                            ))}
+    const taskId = String(active.id);
+    const targetStatus = over.id as Status;
 
-                            {tasksHere.length === 0 && (
-                                <li className="rounded-xl border border-dashed border-white/10 p-6 text-center text-xs text-white/40">
-                                    Sem itens aqui
-                                </li>
-                            )}
-                        </ul>
-                    </section>
-                )
-            })}
-        </div>
-    )
+    setTasks((prev) =>
+      prev.map((t) => (t.id === taskId ? { ...t, status: targetStatus } : t))
+    );
+  }
+
+  return (
+    <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
+      <div className="mx-auto max-w-6xl grid grid-cols-1 gap-6 md:grid-cols-3">
+        {COLUMNS.map((col) => {
+          const tasksHere = tasks.filter((t) => t.status === col.id);
+          return (
+            <DroppableColumn key={col.id} id={col.id} headerClass={col.headerClass} title={col.title}>
+              <ul className="p-3 space-y-3">
+                {tasksHere.map((task) => (
+                  <DraggableCard key={task.id} id={task.id} accent={col.accent} title={task.title} />
+                ))}
+                {tasksHere.length === 0 && (
+                  <li className="rounded-xl border border-dashed border-white/10 p-6 text-center text-xs text-white/40">
+                    Sem itens aqui
+                  </li>
+                )}
+              </ul>
+            </DroppableColumn>
+          );
+        })}
+      </div>
+    </DndContext>
+  );
+}
+
+function DroppableColumn({
+  id,
+  title,
+  headerClass,
+  children,
+}: {
+  id: Status;
+  title: string;
+  headerClass: string;
+  children: React.ReactNode;
+}) {
+  const { isOver, setNodeRef } = useDroppable({ id });
+
+  return (
+    <section
+      ref={setNodeRef}
+      className={`rounded-lg border border-white/10 bg-zinc-800/50 backdrop-blur transition
+        ${isOver ? "ring-2 ring-amber-600" : ""}`}
+    >
+      <header className={`${headerClass} rounded-t-lg px-4 py-3`}>
+        <h3 className="text-center text-sm font-extrabold tracking-widest text-white/70">{title}</h3>
+      </header>
+      {children}
+    </section>
+  );
+}
+
+function DraggableCard({ id, title, accent }: { id: string; title: string; accent: string }) {
+  const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({ id });
+
+  const style = {
+    transform: transform ? CSS.Translate.toString(transform) : undefined,
+    opacity: isDragging ? 0.7 : 1,
+  };
+
+  return (
+    <li
+      ref={setNodeRef}
+      style={style}
+      {...attributes}
+      {...listeners}
+      className="cursor-grab active:cursor-grabbing touch-none rounded-xl border border-white/10 bg-zinc-900/60 p-3 text-left hover:border-white/20 transition"
+    >
+      <h4 className={`text-sm font-semibold ${accent}`}>{title}</h4>
+    </li>
+  );
 }
