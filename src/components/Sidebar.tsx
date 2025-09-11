@@ -159,7 +159,7 @@ export default function Sidebar() {
             {/* CTA WhatsApp */}
             <div className="px-4 pb-8 pt-6">
               <a
-                href="https://wa.me/5579999925126"
+                href="https://wa.me/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mx-auto block w-full max-w-sm rounded-full bg-amber-600 px-6 py-3 text-center text-lg font-semibold text-white hover:border-white hover:border-2 hover:brightness-110 active:translate-y-[2px] active:shadow-[0_4px_0_#9c2a0f] transition"

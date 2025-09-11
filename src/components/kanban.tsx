@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   DndContext,
   useDraggable,
@@ -35,15 +35,20 @@ const INITIAL_TASKS: Task[] = [
 
 export default function Kanban() {
   const [tasks, setTasks] = useState<Task[]>(INITIAL_TASKS);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
-    useSensor(TouchSensor,   { pressDelay: 120 })
+    useSensor(TouchSensor,   { activationConstraint: { delay: 120, tolerance: 5 } })
   );
 
   function handleDragEnd(event: any) {
     const { active, over } = event;
-    if (!over) return; 
+    if (!over) return;
 
     const taskId = String(active.id);
     const targetStatus = over.id as Status;
@@ -53,16 +58,28 @@ export default function Kanban() {
     );
   }
 
+  if (!mounted) return null; // evita mismatch no SSR
+
   return (
     <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
       <div className="mx-auto max-w-6xl grid grid-cols-1 gap-6 md:grid-cols-3">
         {COLUMNS.map((col) => {
           const tasksHere = tasks.filter((t) => t.status === col.id);
           return (
-            <DroppableColumn key={col.id} id={col.id} headerClass={col.headerClass} title={col.title}>
+            <DroppableColumn
+              key={col.id}
+              id={col.id}
+              headerClass={col.headerClass}
+              title={col.title}
+            >
               <ul className="p-3 space-y-3">
                 {tasksHere.map((task) => (
-                  <DraggableCard key={task.id} id={task.id} accent={col.accent} title={task.title} />
+                  <DraggableCard
+                    key={task.id}
+                    id={task.id}
+                    accent={col.accent}
+                    title={task.title}
+                  />
                 ))}
                 {tasksHere.length === 0 && (
                   <li className="rounded-xl border border-dashed border-white/10 p-6 text-center text-xs text-white/40">
@@ -98,15 +115,26 @@ function DroppableColumn({
         ${isOver ? "ring-2 ring-amber-600" : ""}`}
     >
       <header className={`${headerClass} rounded-t-lg px-4 py-3`}>
-        <h3 className="text-center text-sm font-extrabold tracking-widest text-white/70">{title}</h3>
+        <h3 className="text-center text-sm font-extrabold tracking-widest text-white/70">
+          {title}
+        </h3>
       </header>
       {children}
     </section>
   );
 }
 
-function DraggableCard({ id, title, accent }: { id: string; title: string; accent: string }) {
-  const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({ id });
+function DraggableCard({
+  id,
+  title,
+  accent,
+}: {
+  id: string;
+  title: string;
+  accent: string;
+}) {
+  const { attributes, listeners, setNodeRef, transform, isDragging } =
+    useDraggable({ id });
 
   const style = {
     transform: transform ? CSS.Translate.toString(transform) : undefined,
