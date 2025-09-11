@@ -100,7 +100,7 @@ export default function Sidebar() {
 
               <div className="flex items-center gap-5">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/cristiano-jesus-049a55144/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -109,7 +109,7 @@ export default function Sidebar() {
                   <FontAwesomeIcon icon={faLinkedin} className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/cristiano_o8/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -118,7 +118,7 @@ export default function Sidebar() {
                   <FontAwesomeIcon icon={faInstagram} className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/cristianoceke"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
@@ -212,7 +212,7 @@ export default function Sidebar() {
               <ul className="flex items-center justify-center gap-6 text-gray-400">
                 <li>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/cristiano-jesus-049a55144/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -223,7 +223,7 @@ export default function Sidebar() {
                 </li>
                 <li>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/cristiano_o8/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -234,7 +234,7 @@ export default function Sidebar() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/cristianoceke"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
