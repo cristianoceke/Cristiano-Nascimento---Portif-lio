@@ -21,6 +21,7 @@ export default function RootLayout({
       <body className="flex bg-stone-950">
         <Sidebar />
         <main className="flex-1 md:ml-64 ml-0">
+          
           {children}
         </main>
       </body>
